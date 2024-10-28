@@ -27,7 +27,6 @@ from c14n.Canonicalize import canonicalize
 from cachetools import LRUCache
 from collections import namedtuple
 from functools import cmp_to_key
-import lxml.html
 from numbers import Integral, Real
 from frozendict import frozendict
 from pyld.__about__ import (__copyright__, __license__, __version__)
@@ -6635,6 +6634,7 @@ def load_html(input, url, profile, options):
 
     :return: the extracted JSON.
     """
+    raise NotImplementedError("No lxml installed")
     document = lxml.html.fromstring(input)
     # potentially update options[:base]
     html_base = document.xpath('/html/head/base/@href')

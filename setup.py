@@ -50,7 +50,6 @@ setup(
     install_requires=[
         'cachetools',
         'frozendict',
-        'lxml',
     ],
     extras_require={
         'requests': ['requests'],
